@@ -1,15 +1,15 @@
 "use strict";
 
 const express = require("express");
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3001;
 const app = new express();
 
 app.use(express.static("./public"));
 
 app.get("/", (req, res) => {
-    res.status(200).send("pizza time");
+    res.status(200).send("Home Page");
 });
 
 app.listen(PORT, () => {
-    console.log(`server is working on ${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });
